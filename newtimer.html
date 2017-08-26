@@ -19,10 +19,10 @@
   background-size: cover; 
 		}
 		
-		h1{
+		h2{
 			font-family: Arial;
-			font-size: 9em;
-			color: white;
+			text-align:center;
+			color: #C0C0C0;
 		}
 	</style>
 
@@ -74,14 +74,12 @@ function _timer(callback)
     		m=(document.getElementById("minutes").value);
        		s=(document.getElementById("seconds").value);
        				document.getElementById("on").hidden = false;
-
        		if(h==""){ h=00;}
        		if(m==""){ m=00;}
        		if(s==""){ s=0;}
        		h=parseFloat(h);
        		m=parseFloat(m);
        		s=parseFloat(s);
-
        		starttime= Math.floor(h*60*60 + m*60 + s);
        		if(starttime==0){
        			timer.reset(300);
@@ -173,6 +171,7 @@ $(document).ready(function(e)
 </head>
 <body onload="show();">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<h2 > Enter time then start the timer </h2>
 	<div class="row">
 		<div class="col-xs-4">
 			<input style="margin-top: 90px" class="form-control" id="hours">  <h3 style=" color: white" > hour </h3></div>
