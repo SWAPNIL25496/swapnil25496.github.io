@@ -59,14 +59,7 @@ function _timer(callback)
                     }
                     break;
                     
-                    case 1:
-                    if(time < 86400)
-                    {
-                        time++;
-                        generateTime();
-                        if(typeof(callback) === 'function') callback(time);
-                    }
-                    break;
+                  
                 }
             }, interval);
         }
