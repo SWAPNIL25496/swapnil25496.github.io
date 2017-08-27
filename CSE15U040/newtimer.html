@@ -40,7 +40,7 @@ function _timer(callback)
     var starttime;
     // this will start the timer ex. start the timer with 1 second interval timer.start(1000) 
     this.start = function(interval)
-    {
+    {                       document.getElementById("on").hidden = false;
         interval = (typeof(interval) !== 'undefined') ? interval : 1000;
  
         if(status == 0)
@@ -68,7 +68,6 @@ function _timer(callback)
     		h=(document.getElementById("hours").value);
     		m=(document.getElementById("minutes").value);
        		s=(document.getElementById("seconds").value);
-       				document.getElementById("on").hidden = false;
        		if(h==""){ h=00;}
        		if(m==""){ m=00;}
        		if(s==""){ s=0;}
