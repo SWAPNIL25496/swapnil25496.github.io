@@ -80,6 +80,11 @@ function _timer(callback)
        			timer.reset(300);
        			timer.start(1000);
        		}
+            if (h<0 ||m<0 || s<00) {
+                alert('enter positive value');
+                timer.reset(0);
+            }
+
        		else {
        			timer.reset(starttime);
        			timer.start(1000);
