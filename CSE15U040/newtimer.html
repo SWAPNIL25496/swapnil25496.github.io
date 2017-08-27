@@ -68,21 +68,20 @@ function _timer(callback)
     		h=(document.getElementById("hours").value);
     		m=(document.getElementById("minutes").value);
        		s=(document.getElementById("seconds").value);
-       		if(h==""){ h=00;}
-       		if(m==""){ m=00;}
+       		if(h==""){ h=0;}
+       		if(m==""){ m=0;}
        		if(s==""){ s=0;}
        		h=parseFloat(h);
        		m=parseFloat(m);
        		s=parseFloat(s);
                         starttime= Math.floor(h*60*60 + m*60 + s);
 
-            if(h==""||m==""||s==""){ alert('enter positive integer only');}
 
-       		else if(starttime==0){
+       		if(starttime==0){
        			timer.reset(300);
        			timer.start(1000);
        		}
-           else  if (h<0 ||m<0 || s<00) {
+           else  if (h<0 || m<0 || s<0) {
                 alert('enter positive value');
             }
 
@@ -90,6 +89,8 @@ function _timer(callback)
        			timer.reset(starttime);
        			timer.start(1000);
        		}
+               else if(h==""||m==""||s==""){ alert('enter positive integer only');}
+
     }
     //  Same as the name, this will stop or pause the timer ex. timer.stop()
     this.stop =  function()
