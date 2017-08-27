@@ -74,6 +74,8 @@ function _timer(callback)
        		h=parseFloat(h);
        		m=parseFloat(m);
        		s=parseFloat(s);
+            if(h==""||m==""||s==""){ alert('enter positive integer only');}
+
        		starttime= Math.floor(h*60*60 + m*60 + s);
        		if(starttime==0){
        			timer.reset(300);
