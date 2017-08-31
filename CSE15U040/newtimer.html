@@ -104,7 +104,8 @@ function _timer(callback)
     
     // Reset the timer to zero or reset it to your own custom time ex. reset to zero second timer.reset(0)
     this.reset =  function(sec)
-    {
+    {    {                       document.getElementById("on").hidden = true;
+
         sec = (typeof(sec) !== 'undefined') ? sec : 0;
         time = sec;
         generateTime(time);
